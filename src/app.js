@@ -7,6 +7,8 @@ const app = express();
 
 // Middlewares
 app.use(morgan("dev"))
+app.use("/styles", express.static(path.join(__dirname + "/scss")));
+app.use(express.urlencoded({extended: false}))
 
 // Settings
 app.set("port", process.env.PORT || 5000);
@@ -16,7 +18,7 @@ app.engine(".hbs", hbs({
     extname: '.hbs',
     defaultLayout: 'main',
 }));
-app.set('view engine','.hbs')
+app.set('view engine','.hbs');
 
 // Routers
 

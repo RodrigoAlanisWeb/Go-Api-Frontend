@@ -1,1 +1,58 @@
-<h1>Hello World</h1>
+<form action="/" method="post" class="container__form">
+
+    <h2 class="container__title">
+        Add Contact
+    </h2>
+
+    <label for="name" class="container__label">Nombre: </label>
+    <input type="text" name="name" class="container__input">
+
+    <label for="name" class="container__label">Email: </label>
+    <input type="email" name="email" class="container__input">
+
+    <label for="name" class="container__label">Phone: </label>
+    <input type="text" name="phone" class="container__input">
+
+    <button type="submit" class="container__form-btn">
+        Create
+    </button>
+
+</form>
+
+<table class="container__table">
+    <tr class="container__tr">
+        <th class="container__th">
+            Name
+        </th>
+        <th class="container__th">
+            Email
+        </th>
+        <th class="container__th">
+            Phone
+        </th>
+        <th class="container__th">
+            Options
+        </th>
+    </tr>
+    {{#each contacts}}
+        <tr class="container__tr">
+            <td class="container__td">
+                {{ this.name }}
+            </td>
+            <td class="container__td">
+                {{ this.email }}
+            </td>
+            <td class="container__td">
+                {{ this.Phone }}
+            </td>
+            <td class="container__td">
+                <a class="container__btn" href="/edit/{{ this.id }}">
+                    Edit
+                </a>
+                <a href="/delete/{{ this.id }}" class="container__btn container__btn--delete">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    {{/each}}
+</table>

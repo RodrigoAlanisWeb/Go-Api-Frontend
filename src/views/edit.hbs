@@ -1,0 +1,22 @@
+<form action="/save/{{ user.id }}" method="post" class="container__form">
+
+    <h2 class="container__title">
+        Edit Contact
+    </h2>
+
+    <label for="name" class="container__label">Nombre: </label>
+    <input type="text" name="name" class="container__input" value="{{ user.name }}">
+
+    <label for="name" class="container__label">Email: </label>
+    <input type="email" name="email" class="container__input" value="{{ user.email }}">
+
+    <label for="name" class="container__label">Phone: </label>
+    <input type="text" name="phone" class="container__input" value="{{ user.Phone }}">
+
+    <button type="submit" class="container__form-btn">
+        Save
+    </button>
+
+</form>
+
+{{ user }}

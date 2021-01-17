@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go Api | Frontend</title>
+    <title>Go Api | Frontend | {{ title }}</title>
+    <link rel="stylesheet" href="/styles/main.css">
 </head>
+
 <body>
-    
+
+    <header class="header">
+        <h2 class="header__title">
+            Go Api - Frontend <span class="header__author">
+                By <a class="header__link" href="https://github.com/RodrigoAlanisWeb">
+                    Rodrigo Alanis
+                </a>
+            </span>
+        </h2>
+    </header>
+
+    <div class="container">
+        {{{ body }}}
+    </div>
+
+    <footer class="footer">
+        Created By: RodrigoAlanisWeb &copy;
+    </footer>
 </body>
+
 </html>
